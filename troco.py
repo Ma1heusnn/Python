@@ -1,3 +1,4 @@
+#esse sistema tem a função de dividir o valor digitado em notas, abrigando-as desde as maiores até as menores
 notas: float
 resto: float
 troco = float(input("Digite seu troco!"))
@@ -17,4 +18,7 @@ while i < 10:
     print('R${} -> {}' .format(notas[i], quantidade[i]))
     troco = resto
     i = i+1
+
+print('Houve resto de R${}, que, por não haverem moedas de 1 centavo em produção nos dias atuais, não podem ser contabilizados' .format(round(resto, 2)))
+
 
