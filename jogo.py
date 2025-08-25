@@ -46,16 +46,18 @@ for rodada in range(9):
 
     tabuleiro[linha][coluna] = jogador_atual
 
+ #   Verifica se houve vencedor ou não
+    if verificar(tabuleiro, jogador_atual):
+        mostrar_tabuleiro(tabuleiro)
+        print(f"Jogador {jogador_atual} venceu!")
+        break
+
     #   Realiza a troca entre os jogadores
     if jogador_atual == "O":
         jogador_atual = "X"
     else:
         jogador_atual = "O"
 
-    #   Verifica se houve vencedor ou não
-    if verificar(tabuleiro, jogador_atual):
-        mostrar_tabuleiro(tabuleiro)
-        print(f"Jogador {jogador_atual} venceu!")
-        break
+   
 
    
