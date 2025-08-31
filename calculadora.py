@@ -1,4 +1,27 @@
-import math
+import sympy
+
+conta = input("""Digite a operação que deseja fazer
+        obs:
+        Adição = +
+        Subtração = -
+        Divisão = /
+        Multiplicação = x
+              
+        Sua conta: """)
+
+conta = conta.strip() #aqui retiramos todos os espaços vazios que foram digitados pelo usuário
+
+conta = conta.replace("x", "*")
+
+try:
+    resultado = sympify(conta)
+    print("O resultado da sua conta é {}" .format(resultado))
+except ValueError:
+    print("Expressão Inválida!")
+
+#abaixo a versão anterior, baseando-se em manipulação de string e uso de condicionais (if, elif e else)
+
+"""import math
 
 conta = input("""Digite a operação que deseja fazer
         obs:
@@ -33,6 +56,7 @@ elif operador == "x":
 
 
 print(f"O resultado da sua conta ({conta}) é equivalente a {resultado}!")
+
 
 
 
